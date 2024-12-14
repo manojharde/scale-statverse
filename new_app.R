@@ -27,7 +27,7 @@ ui <- dashboardPage(
 server <- function(input, output, session) {
   
   rv <- reactiveValues(values = list(),
-             data = data.frame(Value = NA_real_))
+                       data = data.frame(Value = NA_real_))
   
   # summary_module_server("summary_val", rv = rv)
   callModule(summary_module_server, "summary_val", rv = rv)
